@@ -39,9 +39,8 @@ namespace HouseScout
             SystemTray.SetOpacity(this, 0);
             InitializeComponent();
 
-            RefreshProgressBar.IsIndeterminate = true;
-            RefreshProgressBar.Visibility = Visibility.Visible;
-            RefreshProgressBar.IsEnabled = true;
+            Microsoft.Phone.Maps.MapsSettings.ApplicationContext.ApplicationId = "f637ab6b-bb9a-418b-bf31-1ac6667894c4";
+            Microsoft.Phone.Maps.MapsSettings.ApplicationContext.AuthenticationToken = "Wqr37yrpSvPWjzKdoHtaqw";
 
             goToLocation();
             TrackLocation();
@@ -58,9 +57,6 @@ namespace HouseScout
                 searchbtn.Text = "cancel";
             }
 
-            RefreshProgressBar.IsIndeterminate = false;
-            RefreshProgressBar.Visibility = Visibility.Collapsed;
-            RefreshProgressBar.IsEnabled = false;
         }
 
         // Purpose: prompt the user to allow location services or not
@@ -98,6 +94,8 @@ namespace HouseScout
         // Purpose: set the map center to current location
         private async void goToLocation()
         {
+            
+
             Geoposition geoposition;
             eyBBLocateMe = new Geolocator();
             eyBBLocateMe.DesiredAccuracyInMeters = 20;
@@ -134,11 +132,17 @@ namespace HouseScout
         //purpose: track location in real time
         private void TrackLocation()
         {
+            RefreshProgressBar.IsIndeterminate = true;
+            RefreshProgressBar.Visibility = Visibility.Visible;
+            RefreshProgressBar.IsEnabled = true;
+
             eyBBLocateMe = new Geolocator();
             eyBBLocateMe.DesiredAccuracy = PositionAccuracy.High;
             eyBBLocateMe.MovementThreshold = 1; // The units are meters.
 
             eyBBLocateMe.PositionChanged += eyBBLocateMe_PositionChanged;
+
+
         }
 
         //event that your position has changed
@@ -174,6 +178,10 @@ namespace HouseScout
                 
                 // Add the MapLayer to the Map.
                 myMap.Layers.Add(myLocationLayer);
+
+                RefreshProgressBar.IsIndeterminate = false;
+                RefreshProgressBar.IsEnabled = false;
+                RefreshProgressBar.Visibility = Visibility.Collapsed;
             });
         }
 
@@ -326,9 +334,17 @@ namespace HouseScout
         //purpose: refresh house pins
         private void RefreshButton_Click(object sender, EventArgs e)
         {
+            RefreshProgressBar.IsIndeterminate = true;
+            RefreshProgressBar.Visibility = Visibility.Visible;
+            RefreshProgressBar.IsEnabled = true;
+
             myMap.Layers.Remove(MyLayer);
             MyLayer = new MapLayer();
             PullFromDatabase();
+
+            RefreshProgressBar.IsIndeterminate = false;
+            RefreshProgressBar.IsEnabled = false;
+            RefreshProgressBar.Visibility = Visibility.Collapsed;
         }
 
         //onClick method for the homes near you button
