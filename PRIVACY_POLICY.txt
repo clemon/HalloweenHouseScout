@@ -1,4 +1,8 @@
 Halloween House Scout - Privacy Policy
 =============================================
 
-Your privacy is important to us. This application uses your current location to improve your trick-or-treating experience. This may be stored and shared. You may disable Location Services through your phone's native settings. If you do not want this app in particular to use your location data, you may decline access when prompted on first launch. If you have questions, contact clemon@ucsd.edu.
+Your privacy is important to us. This application uses your current location to improve your trick-or-treating experience. 
+This may be stored and shared. You may disable Location Services through your phone's native settings. 
+If you do not want this app in particular to use your location data, you may decline access when prompted on first launch. 
+
+If you have questions, contact clemon@ucsd.edu.
