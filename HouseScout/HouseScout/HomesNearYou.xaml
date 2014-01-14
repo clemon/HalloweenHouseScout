@@ -25,15 +25,15 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="HOMES" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Near You" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel Grid.Row="0" Margin="12,12,0,0" Height="128" VerticalAlignment="Top">
+            <TextBlock Text="HOMES" Style="{StaticResource PhoneTextNormalStyle}" Margin="5,10,12,0"/>
+            <TextBlock Text="Near You" Margin="0,-17,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Sorted from Closest to Farthest" Margin="5,-15,0,0"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Text="Sorted from Closest to Farthest" Margin="88,56,93,524"/>
-            <phone:LongListSelector VerticalAlignment="Bottom" Height="519"
+            <phone:LongListSelector VerticalAlignment="Bottom" Height="568"
                                     x:Name="list" FontSize="22"
                                     SelectionChanged="list_SelectionChanged">
             </phone:LongListSelector>

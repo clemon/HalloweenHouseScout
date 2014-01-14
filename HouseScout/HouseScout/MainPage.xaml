@@ -13,7 +13,7 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
     <phone:PhoneApplicationPage.ApplicationBar>
@@ -65,10 +65,10 @@
 
             </maps:Map>
             <my:WatermarkTextBox x:Name="SearchBar"  WatermarkText=" Enter an address" 
-                                 Margin="0,0,60,50" InputScope="Search" Visibility="Collapsed" VerticalAlignment="Top"/>
+                                 Margin="0,20,60,0" InputScope="Search" Height="72" VerticalAlignment="Top" Visibility="Collapsed"/>
             <Button x:Name="GoButton" Content="Go" HorizontalAlignment="Right" 
                     VerticalAlignment="Top" Width="84" Canvas.ZIndex="0"
-                    Click="GoButton_Click" Visibility="Collapsed"/>
+                    Click="GoButton_Click" Margin="0,20,0,0" Visibility="Collapsed"/>
         </Grid>
         <ProgressBar x:Name="RefreshProgressBar" IsIndeterminate="True" Margin="0,0,0,171" 
                      Foreground="Orange" Background="#19FFFFFF" IsEnabled="False" VerticalAlignment="Top" Visibility="Visible"/>

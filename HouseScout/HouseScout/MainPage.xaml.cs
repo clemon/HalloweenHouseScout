@@ -21,6 +21,7 @@ using Microsoft.Phone.Maps.Services;
 using System.Collections.ObjectModel;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Windows.Media.Imaging;
+using Microsoft.Phone.Tasks;
 
 
 namespace HouseScout
@@ -42,10 +43,24 @@ namespace HouseScout
             Microsoft.Phone.Maps.MapsSettings.ApplicationContext.ApplicationId = "f637ab6b-bb9a-418b-bf31-1ac6667894c4";
             Microsoft.Phone.Maps.MapsSettings.ApplicationContext.AuthenticationToken = "Wqr37yrpSvPWjzKdoHtaqw";
 
-            goToLocation();
-            TrackLocation();
-            PullFromDatabase();
+            Debug.WriteLine(checkConnection());
+            /*if (checkConnection() == false)
+            {
+                Debug.WriteLine("if-statement");
+                
+                //NavigationService.Navigate(new Uri("/HomesNearYou.xaml", UriKind.Relative));
+                //ConnectionSettingsTask connectionSettingsTask = new ConnectionSettingsTask();
+                //connectionSettingsTask.ConnectionSettingsType = ConnectionSettingsType.WiFi;
+                //connectionSettingsTask.Show();
 
+            }*/
+            //else
+            //{
+                goToLocation();
+                TrackLocation();
+                PullFromDatabase();
+            //}
+            
             if (App.goHere != "")
             {
                 ApplicationBarIconButton searchbtn = (ApplicationBarIconButton)ApplicationBar.Buttons[3];
@@ -57,6 +72,12 @@ namespace HouseScout
                 searchbtn.Text = "cancel";
             }
 
+        }
+
+        // Purpose: Check if there is active data connection
+        public static bool checkConnection()
+        {
+            return Microsoft.Phone.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable();
         }
 
         // Purpose: prompt the user to allow location services or not
@@ -94,8 +115,6 @@ namespace HouseScout
         // Purpose: set the map center to current location
         private async void goToLocation()
         {
-            
-
             Geoposition geoposition;
             eyBBLocateMe = new Geolocator();
             eyBBLocateMe.DesiredAccuracyInMeters = 20;
@@ -123,7 +142,7 @@ namespace HouseScout
             {
                 if ((uint)ex.HResult == 0x80004004)
                 {
-                    //TODO add error message "location services are turned off"
+                    //location services disabled
                 }
             }
 
@@ -247,20 +266,28 @@ namespace HouseScout
         //purpose: go to address typed in searchbar
         private void GoButton_Click(object sender, RoutedEventArgs e)
         {
-            // Define search
-            GeocodeQuery geoQuery = new GeocodeQuery();
-            geoQuery.SearchTerm = SearchBar.Text;
-            geoQuery.GeoCoordinate = new GeoCoordinate(myLocation.Latitude, myLocation.Longitude);
-            geoQuery.QueryCompleted += (s, f) =>
+            if (SearchBar.Text.Trim() == "")
             {
-                if (f.Error == null && f.Result.Count > 0)
+                // do nothing
+            }
+            else 
+            {
+                // Define search
+                GeocodeQuery geoQuery = new GeocodeQuery();
+                geoQuery.SearchTerm = SearchBar.Text;
+                geoQuery.GeoCoordinate = new GeoCoordinate(myLocation.Latitude, myLocation.Longitude);
+                geoQuery.QueryCompleted += (s, f) =>
                 {
-                    // f.Result will contain a list of coordinates of matched places.
-                    // You can show them on a map control , e.g.
-                    myMap.SetView(f.Result[0].GeoCoordinate, 16, 0, 0, MapAnimationKind.Parabolic);
-                }
-            };
-            geoQuery.QueryAsync();
+                    if (f.Error == null && f.Result.Count > 0)
+                    {
+                        // f.Result will contain a list of coordinates of matched places.
+                        // You can show them on a map control , e.g.
+                        myMap.SetView(f.Result[0].GeoCoordinate, 16, 0, 0, MapAnimationKind.Parabolic);
+                    }
+                };
+                geoQuery.QueryAsync();            
+            }
+            
         }
 
 
@@ -338,9 +365,18 @@ namespace HouseScout
             RefreshProgressBar.Visibility = Visibility.Visible;
             RefreshProgressBar.IsEnabled = true;
 
-            myMap.Layers.Remove(MyLayer);
-            MyLayer = new MapLayer();
-            PullFromDatabase();
+            if (checkConnection() == false)         // Checks for absense of connection
+            {
+                MessageBoxResult noConnectionError = MessageBox.Show("No Internet Connection Found. Cannot find registered homes.",
+                    "Error", MessageBoxButton.OK);
+
+            }
+            else                                  // if connected, refresh
+            {
+                myMap.Layers.Remove(MyLayer);
+                MyLayer = new MapLayer();
+                PullFromDatabase();
+            }
 
             RefreshProgressBar.IsIndeterminate = false;
             RefreshProgressBar.IsEnabled = false;
