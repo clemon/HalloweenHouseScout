@@ -1,12 +1,11 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="HouseScout.HomesNearYou"
+    x:Class="HouseScout.PrivacyPolicyPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:HouseScout"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -25,23 +24,18 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,12,0,0" Height="128" VerticalAlignment="Top">
-            <TextBlock Text="HOMES" Style="{StaticResource PhoneTextNormalStyle}" Margin="5,10,12,0"/>
-            <TextBlock Text="Near You" Margin="0,-17,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-            <TextBlock Text="Sorted from Closest to Farthest" Margin="5,-15,0,0"/>
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Halloween HouseScout" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Privacy Policy" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:LongListSelector VerticalAlignment="Bottom" Height="568"
-                                    x:Name="list" FontSize="22"
-                                    SelectionChanged="list_SelectionChanged" Margin="0,0,0,10">
-            </phone:LongListSelector>
-           
+            <TextBlock Margin="14,60,10,0" Text="Your privacy is important to us. This application uses your current location to improve your trick-or-treating experience. 
+This may be stored and shared. You may disable Location Services through your phone's native settings. 
+If you do not want this app in particular to use your location data, you may decline access when prompted on first launch.
+If you have questions, contact clemon@ucsd.edu." TextWrapping="Wrap"/>
         </Grid>
-        
     </Grid>
-
-    
 
 </phone:PhoneApplicationPage>

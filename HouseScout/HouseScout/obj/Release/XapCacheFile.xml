@@ -1,5 +1,5 @@
-﻿<xapCache source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\Bin\Release\HouseScout_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="1/14/2014 1:30:03 AM">
-  <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\obj\Release\HouseScout.dll" archivePath="HouseScout.dll" lastWriteTime="1/14/2014 1:30:02 AM" />
+﻿<xapCache source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\Bin\Release\HouseScout_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="1/17/2014 10:40:40 AM">
+  <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\obj\Release\HouseScout.dll" archivePath="HouseScout.dll" lastWriteTime="1/17/2014 10:40:38 AM" />
   <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="11/7/2013 2:32:48 PM" />
   <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\Assets\AppBar\appbar.city.seattle.png" archivePath="Assets\AppBar\appbar.city.seattle.png" lastWriteTime="11/7/2013 2:32:48 PM" />
   <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\Assets\AppBar\appbar.crosshair.png" archivePath="Assets\AppBar\appbar.crosshair.png" lastWriteTime="11/7/2013 2:32:48 PM" />
@@ -29,7 +29,7 @@
   <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="11/7/2013 2:32:52 PM" />
   <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="11/7/2013 2:32:52 PM" />
   <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="11/7/2013 2:32:52 PM" />
-  <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="1/11/2014 4:31:56 PM" />
+  <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="1/17/2014 10:40:39 AM" />
   <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\packages\Facebook.6.4.2\lib\wp8\Facebook.dll" archivePath="Facebook.dll" lastWriteTime="11/7/2013 2:32:53 PM" />
   <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\packages\PhoneThemeManager.1.5\lib\sl4-windowsphone71\JeffWilcox.PhoneThemeManager.dll" archivePath="JeffWilcox.PhoneThemeManager.dll" lastWriteTime="11/7/2013 2:32:54 PM" />
   <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="11/7/2013 2:32:55 PM" />
@@ -57,5 +57,5 @@
   <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\packages\Microsoft.Net.Http.2.2.15\lib\sl4-windowsphone71\System.Net.Http.Primitives.xml" archivePath="System.Net.Http.Primitives.xml" lastWriteTime="11/7/2013 2:32:54 PM" />
   <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\icon.png" archivePath="icon.png" lastWriteTime="11/7/2013 2:32:52 PM" />
   <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\med.png" archivePath="med.png" lastWriteTime="11/7/2013 2:32:52 PM" />
-  <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="1/12/2014 7:23:26 PM" />
+  <file source="D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="1/17/2014 10:40:39 AM" />
 </xapCache>

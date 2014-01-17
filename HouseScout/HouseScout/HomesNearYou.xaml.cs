@@ -9,6 +9,8 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.Device.Location;
 using System.Diagnostics;
+using System.Windows.Data;
+using System.Xml.Linq;
 
 namespace HouseScout
 {

@@ -44,6 +44,9 @@
                        TextWrapping="Wrap"/>
             <Button x:Name="locationSettingsButton" Click="locationSettingsButton_Click" Content="Location Settings" HorizontalAlignment="Center"/>
         </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" Grid.Row="2">
+            <Button x:Name="PrivPolicyButton" Content="View the privacy policy" Click="PrivPolicyButton_Click"/>
+        </StackPanel>
     </Grid>
 
 </phone:PhoneApplicationPage>

@@ -35,6 +35,8 @@
                                               Click="NearYou_Click"/>
                 <shell:ApplicationBarMenuItem Text="register your home"
                                               Click="RegisterYourHome_Click"/>
+                <shell:ApplicationBarMenuItem Text="privacy policy"
+                                              Click="PrivacyPolicy_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>

@@ -317,6 +317,11 @@ namespace HouseScout
 
         }
 
+        private void PrivacyPolicy_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/PrivacyPolicyPage.xaml", UriKind.Relative));
+        }
+
         //purpose: add a marker to the overlay
         private void AddMarkers(string address, GeoCoordinate coord, bool candy)
         {

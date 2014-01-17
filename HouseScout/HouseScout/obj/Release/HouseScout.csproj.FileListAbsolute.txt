@@ -195,6 +195,6 @@ D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\Hous
 D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\obj\Release\HouseScout.dll
 D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\obj\Release\HouseScout.pdb
 D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\obj\Release\XapCacheFile.xml
-D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\obj\Release\HouseScout.csprojResolveAssemblyReference.cache
 D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\obj\Release\ErrorScreen.g.cs
 D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\obj\Release\StartPage.g.cs
+D:\Shared\Programming\Visual Studio Projects\HalloweenHouseScout\HouseScout\HouseScout\obj\Release\PrivacyPolicyPage.g.cs

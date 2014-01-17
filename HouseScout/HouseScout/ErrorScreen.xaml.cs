@@ -25,6 +25,8 @@ namespace HouseScout
         {
             Geolocator locator = new Geolocator();
 
+            NavigationService.RemoveBackEntry();
+
             if (locator.LocationStatus == PositionStatus.Disabled && checkConnection() == false)
             {
                 // Location and wifi off
@@ -84,6 +86,11 @@ namespace HouseScout
         private async void locationSettingsButton_Click(object sender, RoutedEventArgs e)
         {
             await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings-location:"));
+        }
+
+        private void PrivPolicyButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/PrivacyPolicyPage.xaml", UriKind.Relative));
         }
 
     }
