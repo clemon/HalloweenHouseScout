@@ -2,7 +2,7 @@ HalloweenHouseScout
 ===================
 
 A Windows Phone 8 application                                      
-Winner of UCSD's Windows Phone Halloween Application contest
+Winner of Microsoft at UCSD's Windows Phone Halloween Application contest
 
 
 A new way to Trick-or-Treat! HouseScout serves as your guide on the night
