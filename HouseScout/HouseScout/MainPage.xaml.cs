@@ -235,8 +235,17 @@ namespace HouseScout
         //purpose: locate me
         private void LocationButton_Click(object sender, EventArgs e)
         {
-            goToLocation();
-            TrackLocation();
+            Geolocator locator = new Geolocator();
+
+            if (locator.LocationStatus == PositionStatus.Disabled)
+            {
+                MessageBox.Show("Location Settings are disabled. Please enable them");
+            }
+            else
+            {
+                goToLocation();
+                TrackLocation();
+            }
         }
 
         //click event for search button
@@ -365,7 +374,7 @@ namespace HouseScout
         //onClick method for refresh button
         //purpose: refresh house pins
         private void RefreshButton_Click(object sender, EventArgs e)
-        {
+        {        
             RefreshProgressBar.IsIndeterminate = true;
             RefreshProgressBar.Visibility = Visibility.Visible;
             RefreshProgressBar.IsEnabled = true;
@@ -386,6 +395,7 @@ namespace HouseScout
             RefreshProgressBar.IsIndeterminate = false;
             RefreshProgressBar.IsEnabled = false;
             RefreshProgressBar.Visibility = Visibility.Collapsed;
+        
         }
 
         //onClick method for the homes near you button
@@ -418,6 +428,11 @@ namespace HouseScout
             
             NavigationService.Navigate(new Uri("/HomesNearYou.xaml", UriKind.Relative));
 
+        }
+
+        private async void ApplicationBarMenuItem_Click(object sender, EventArgs e)
+        {
+            await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings-location:"));
         }
         
     }
